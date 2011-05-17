@@ -6,7 +6,7 @@ import java.util.List;
  * Main class
  */
 public class RunMe {
-    public static final String FILENAME = "/home/marcin/projects/madzia/magister_pat/ankieta_good.csv";
+    public static final String FILENAME = "/home/marcin/projects/madzia/magister_pat/ank_tst/ankieta_good.csv";
 
 
     public static void main(String[] args) {

@@ -1,5 +1,10 @@
 package pl.remadag.madzia.pat;
 
+import pl.remadag.madzia.pat.database.LoadDriver;
+import pl.remadag.madzia.pat.database.procedure.PostgreSQLProcedures;
+
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
 
@@ -13,7 +18,17 @@ public class DBTools {
                 String[] recordsOnLine = line.split(";");
                 String statement = buildInsertStatememt(recordsOnLine);
                 System.out.println("Dodam: " + statement);
+
+                Connection sqlConn = LoadDriver.getPostgresConnection();
+                PostgreSQLProcedures procedures = new PostgreSQLProcedures(sqlConn);
+                try {
+                    procedures.callStatus();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Udalo sie!");
             }
+
 
     }
 
