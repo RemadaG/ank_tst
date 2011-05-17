@@ -1,4 +1,4 @@
-package pl.gadamer.madzia.pat;
+package pl.remadag.madzia.pat;
 
 import java.util.Collection;
 import java.util.List;
