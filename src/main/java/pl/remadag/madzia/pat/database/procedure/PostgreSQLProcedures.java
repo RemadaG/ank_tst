@@ -22,7 +22,7 @@ public class PostgreSQLProcedures implements SpiderProcedures {
 
     @Override
     public void callStatus() throws SQLException {
-        String sqlString = "SELECT * FROM DUAL}";
+        String sqlString = "SELECT * FROM \"Ankieta\"";
         CallableStatement statement = sqlConn.prepareCall(sqlString);
         statement.execute();
         int iStatus = statement.getInt(1);

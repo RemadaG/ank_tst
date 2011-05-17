@@ -16,10 +16,10 @@ public class LoadDriver {
     try {
       Class.forName("org.postgresql.Driver");
 
-      String url = "jdbc:postgresql://localhost/spider_db";
+      String url = "jdbc:postgresql://localhost/magister_uj";
       Properties props = new Properties();
-      props.setProperty("user", "maga");
-      props.setProperty("password", "maga");
+      props.setProperty("user", "marcin");
+      props.setProperty("password", "marcin");
 
       connection = DriverManager.getConnection(url, props);
     } catch (Exception ex) {
