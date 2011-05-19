@@ -16,4 +16,6 @@ public interface SpiderProcedures {
    */
   public void callInsert(String statementString) throws SQLException;
 
+  public void callSelectP1(String filenameP1) throws SQLException;
+
 }

@@ -55,4 +55,11 @@ public class PostgreSQLProcedures implements SpiderProcedures {
 
     }
 
+    @Override
+    public void callSelectP1(String filenameP1) throws SQLException {
+        CallableStatement statement = sqlConn.prepareCall("COPY (SELECT * FROM ankieta_pat) TO '"+ filenameP1+"' WITH CSV;");
+        statement.execute();
+        sqlConn.commit();
+    }
+
 }
