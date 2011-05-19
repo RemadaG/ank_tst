@@ -3,6 +3,7 @@ package pl.remadag.madzia.pat.database.procedure;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * PostgreSQL procedures
@@ -21,12 +22,37 @@ public class PostgreSQLProcedures implements SpiderProcedures {
     }
 
     @Override
-    public void callStatus() throws SQLException {
-        String sqlString = "SELECT * FROM \"Ankieta\"";
+    public void callInsert(String statementString) throws SQLException {
+/*        String sqlString = statementString;
         CallableStatement statement = sqlConn.prepareCall(sqlString);
         statement.execute();
         int iStatus = statement.getInt(1);
-        sqlConn.commit();
+        sqlConn.commit();*/
+        Statement statement = sqlConn.createStatement();
+//        statement.executeU(statementString);
+        Statement s = null;
+        try {
+          s = sqlConn.createStatement();
+        } catch (SQLException se) {
+          System.out.println("We got an exception while creating a statement:" +
+                             "that probably means we're no longer connected.");
+          se.printStackTrace();
+          System.exit(1);
+        }
+
+        int m = 0;
+
+        try {
+          m = s.executeUpdate(statementString);
+        } catch (SQLException se) {
+          System.out.println("We got an exception while executing our query:" +
+                             "that probably means our SQL is invalid");
+          se.printStackTrace();
+          System.exit(1);
+        }
+
+        System.out.println("Successfully modified " + m + " rows.\n");
+
     }
 
 }

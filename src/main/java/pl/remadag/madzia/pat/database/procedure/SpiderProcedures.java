@@ -11,8 +11,9 @@ public interface SpiderProcedures {
 
   /**
    * Adding triple words to defined tables in DB
+   * @param statementString statement
    * @throws SQLException exception
    */
-  public void callStatus() throws SQLException;
+  public void callInsert(String statementString) throws SQLException;
 
 }
