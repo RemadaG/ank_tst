@@ -15,6 +15,7 @@ public class DBTools {
     public void saveLineInDB(Collection<String> lines) {
         for (String line : lines) {
             String[] recordsOnLine = line.split(";");
+            System.out.println("linia: " + recordsOnLine[0]);
             String statement = buildInsertStatememt(recordsOnLine);
             Connection sqlConn = LoadDriver.getPostgresConnection();
             PostgreSQLProcedures procedures = new PostgreSQLProcedures(sqlConn);
@@ -27,13 +28,13 @@ public class DBTools {
         System.out.println("Wywolalem wszystkie INSERTy");
     }
 
-    public void selectStatments(String filenameP1) {
-        System.out.println("Wywoluje select P1");
+    public void selectStatments(String question) {
+        System.out.println("Wywoluje select P_"+question);
 
         Connection sqlConn = LoadDriver.getPostgresConnection();
         PostgreSQLProcedures procedures = new PostgreSQLProcedures(sqlConn);
         try {
-            procedures.callSelectP1(filenameP1);
+            procedures.callSelectP(question);
         } catch (SQLException e) {
             e.printStackTrace();
         }
