@@ -89,6 +89,7 @@ public class PostgreSQLProcedures implements SpiderProcedures {
                 "sum(case when m_wykm = 'c' then 1 else 0 end) as wykmc,''," +
                 "sum(case when m_wykm = 'd' then 1 else 0 end) as wykmd,''," +
 
+                "sum(case when m_wyko = 'a' then 1 else 0 end) as wykoa,''," +
                 "sum(case when m_wyko = 'b' then 1 else 0 end) as wykob,''," +
                 "sum(case when m_wyko = 'c' then 1 else 0 end) as wykoc,''," +
                 "sum(case when m_wyko = 'd' then 1 else 0 end) as wykod, ''," +
