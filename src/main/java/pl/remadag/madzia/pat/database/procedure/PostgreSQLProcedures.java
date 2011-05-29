@@ -1,9 +1,8 @@
 package pl.remadag.madzia.pat.database.procedure;
 
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import pl.remadag.madzia.pat.data.ComplexTriple;
+
+import java.sql.*;
 
 /**
  * PostgreSQL procedures
@@ -32,23 +31,23 @@ public class PostgreSQLProcedures implements SpiderProcedures {
 //        statement.executeU(statementString);
         Statement s = null;
         try {
-          s = sqlConn.createStatement();
+            s = sqlConn.createStatement();
         } catch (SQLException se) {
-          System.out.println("We got an exception while creating a statement:" +
-                             "that probably means we're no longer connected.");
-          se.printStackTrace();
-          System.exit(1);
+            System.out.println("We got an exception while creating a statement:" +
+                    "that probably means we're no longer connected.");
+            se.printStackTrace();
+            System.exit(1);
         }
 
         int m = 0;
 
         try {
-          m = s.executeUpdate(statementString);
+            m = s.executeUpdate(statementString);
         } catch (SQLException se) {
-          System.out.println("We got an exception while executing our query:" +
-                             "that probably means our SQL is invalid");
-          se.printStackTrace();
-          System.exit(1);
+            System.out.println("We got an exception while executing our query:" +
+                    "that probably means our SQL is invalid");
+            se.printStackTrace();
+            System.exit(1);
         }
 
         System.out.println("Successfully modified " + m + " rows.\n");
@@ -115,4 +114,24 @@ public class PostgreSQLProcedures implements SpiderProcedures {
         sqlConn.commit();
     }
 
+    public ComplexTriple callSelectComplex(String question, String letter, String where) throws SQLException {
+
+        String sqlString = "SELECT p_" + question + letter + ", count(*) from ankieta_pat " + where + " group by p_"
+                + question + letter + " order by count(*) desc limit 1;";
+//        System.out.println("Executing: " + sqlString);
+
+        Statement sql = sqlConn.createStatement();
+        ResultSet results = sql.executeQuery(sqlString);
+        int answer = 0;
+        int answerCount = 0;
+        if (results != null) {
+            while (results.next()) {
+                answer = results.getInt(1);
+                answerCount = results.getInt(2);
+            }
+            results.close();
+        }
+        return new ComplexTriple(letter, answer, answerCount);
+
+    }
 }

@@ -26,7 +26,7 @@ public class LoadDriver {
       System.err.println("[getPostgresConnection] error while getting SQL connection" + ex);
       System.exit(1);
     }
-        System.out.println("[getPostgresConnection] connection get successfully");
+//        System.out.println("[getPostgresConnection] connection get successfully");
     return connection;
 
   }

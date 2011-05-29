@@ -1,6 +1,11 @@
 package pl.remadag.madzia.pat;
 
+import pl.remadag.madzia.pat.data.ComplexTriple;
+
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Main class
@@ -43,7 +48,7 @@ public class RunMe {
 //        dbTool.selectStatments("1x");
 //        dbTool.selectStatments("1y");
 //        dbTool.selectStatments("1z");
-        
+
 //        dbTool.selectStatments("2a");
 //        dbTool.selectStatments("2b");
 //        dbTool.selectStatments("2c");
@@ -67,7 +72,7 @@ public class RunMe {
 //        dbTool.selectStatments("2u");
 //        dbTool.selectStatments("2v");
 //        dbTool.selectStatments("2w");
-        
+
 //        dbTool.selectStatments("19a");
 //        dbTool.selectStatments("19b");
 //        dbTool.selectStatments("19c");
@@ -99,18 +104,92 @@ public class RunMe {
 //        dbTool.selectStatments("22n");
 //        dbTool.selectStatments("22o");
 
-        dbTool.selectStatments("3");
-        dbTool.selectStatments("4");
-        dbTool.selectStatments("8");
-        dbTool.selectStatments("9");
-        dbTool.selectStatments("14");
-        dbTool.selectStatments("23");
-        dbTool.selectStatments("24");
-        dbTool.selectStatments("25");
-        dbTool.selectStatments("26");
-        dbTool.selectStatments("27");
-        dbTool.selectStatments("29");
-        dbTool.selectStatments("30");
+//        dbTool.selectStatments("3");
+//        dbTool.selectStatments("4");
+//        dbTool.selectStatments("8");
+//        dbTool.selectStatments("9");
+//        dbTool.selectStatments("14");
+//        dbTool.selectStatments("23");
+//        dbTool.selectStatments("24");
+//        dbTool.selectStatments("25");
+//        dbTool.selectStatments("26");
+//        dbTool.selectStatments("27");
+//        dbTool.selectStatments("29");
+//        dbTool.selectStatments("30");
+
+        Map<String, String> lettersMatching = new HashMap<String, String>();
+        lettersMatching.put("a", "alicja");
+        lettersMatching.put("b", "bachleda");
+        lettersMatching.put("c", "c");
+        lettersMatching.put("d", "d");
+        lettersMatching.put("e", "e");
+        lettersMatching.put("f", "f");
+        lettersMatching.put("g", "g");
+        lettersMatching.put("h", "h");
+        lettersMatching.put("i", "i");
+        lettersMatching.put("j", "j");
+        lettersMatching.put("k", "k");
+        lettersMatching.put("l", "l");
+        lettersMatching.put("m", "m");
+        lettersMatching.put("n", "n");
+        lettersMatching.put("o", "o");
+        lettersMatching.put("p", "p");
+        lettersMatching.put("q", "q");
+        lettersMatching.put("r", "r");
+        lettersMatching.put("s", "s");
+        lettersMatching.put("t", "t");
+        lettersMatching.put("u", "u");
+        lettersMatching.put("v", "v");
+        lettersMatching.put("w", "w");
+        lettersMatching.put("x", "x");
+        lettersMatching.put("y", "ąężóź");
+        lettersMatching.put("z", "zżź");
+
+
+//        dbTool.selectComplex("1", lettersMatching, "");
+//        dbTool.selectComplex("1", lettersMatching, "where code like '%m%' or code like '%M%'");
+//        dbTool.selectComplex("1", lettersMatching, "where code like '%k%' or code like '%K%'");
+
+//        dbTool.selectComplex("1", lettersMatching, "where m_mz = 'a'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_mz = 'b'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_mz = 'c'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_mz = 'd'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_mz = 'e'");
+//
+//        dbTool.selectComplex("1", lettersMatching, "where m_wm not in ('a','b','c','d','e', 'f', 'g')'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wm = 'c'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wm = 'd'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wm = 'e'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wm = 'f'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wm = 'g'");
+//
+//        dbTool.selectComplex("1", lettersMatching, "where m_wo = 'c'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wo = 'd'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wo = 'e'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wo = 'f'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wo = 'g'");
+//
+//        dbTool.selectComplex("1", lettersMatching, "where m_wykm not in ('a','b','c','d')");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wykm = 'a'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wykm = 'b'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wykm = 'c'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wykm = 'd'");
+//
+//        dbTool.selectComplex("1", lettersMatching, "where m_wyko = 'a'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wyko = 'b'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wyko = 'c'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wyko = 'd'");
+
+//        dbTool.selectComplex("1", lettersMatching, "where m_lr = '0'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_lr = '1'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_lr = '2'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_lr = '3'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_lr in ('4', '5', '6', '7')");
+//
+//        dbTool.selectComplex("1", lettersMatching, "where m_wr not in ('a','b','c')");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wr LIKE '%a%'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wr LIKE '%b%'");
+//        dbTool.selectComplex("1", lettersMatching, "where m_wr LIKE '%c%'");
 
     }
 

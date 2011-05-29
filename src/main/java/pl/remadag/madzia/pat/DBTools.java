@@ -1,11 +1,13 @@
 package pl.remadag.madzia.pat;
 
+import pl.remadag.madzia.pat.data.ComplexTriple;
+import pl.remadag.madzia.pat.data.TripleComparator;
 import pl.remadag.madzia.pat.database.LoadDriver;
 import pl.remadag.madzia.pat.database.procedure.PostgreSQLProcedures;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Collection;
+import java.util.*;
 
 /**
  * DB Tools
@@ -29,7 +31,7 @@ public class DBTools {
     }
 
     public void selectStatments(String question) {
-        System.out.println("Wywoluje select P_"+question);
+        System.out.println("Wywoluje select P_" + question);
 
         Connection sqlConn = LoadDriver.getPostgresConnection();
         PostgreSQLProcedures procedures = new PostgreSQLProcedures(sqlConn);
@@ -58,5 +60,32 @@ public class DBTools {
         }
         builder.deleteCharAt(builder.length() - 2).append(")");
         return builder.toString();
+    }
+
+    public void selectComplex(String question, Map<String, String> letters, String where) {
+        List<ComplexTriple> triple = new ArrayList<ComplexTriple>();
+        for (String letter : letters.keySet()) {
+            Connection sqlConn = LoadDriver.getPostgresConnection();
+            PostgreSQLProcedures procedures = new PostgreSQLProcedures(sqlConn);
+            try {
+                ComplexTriple result = procedures.callSelectComplex(question, letter, where);
+                triple.add(result);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        printTriples(triple, letters);
+    }
+
+    private void printTriples(List<ComplexTriple> triple, Map<String, String> matching) {
+        Collections.sort(triple, new TripleComparator());
+        for (ComplexTriple complexTriple : triple) {
+            for(String key: matching.keySet()) {
+                if(key.equals(complexTriple.getLetter())) {
+                    System.out.println(matching.get(key));
+                }
+            }
+        }
     }
 }
