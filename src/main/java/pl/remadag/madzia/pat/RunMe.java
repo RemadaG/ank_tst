@@ -82,22 +82,36 @@ public class RunMe {
 //        dbTool.selectStatments("19l");
 //        dbTool.selectStatments("19ll");
 
-        dbTool.selectStatments("22a");
-        dbTool.selectStatments("22b");
-        dbTool.selectStatments("22c");
-        dbTool.selectStatments("22d");
-        dbTool.selectStatments("22e");
-        dbTool.selectStatments("22f");
-        dbTool.selectStatments("22g");
-        dbTool.selectStatments("22h");
-        dbTool.selectStatments("22i");
-        dbTool.selectStatments("22j");
-        dbTool.selectStatments("22k");
-        dbTool.selectStatments("22l");
-        dbTool.selectStatments("22ll");
-        dbTool.selectStatments("22m");
-        dbTool.selectStatments("22n");
-        dbTool.selectStatments("22o");
+//        dbTool.selectStatments("22a");
+//        dbTool.selectStatments("22b");
+//        dbTool.selectStatments("22c");
+//        dbTool.selectStatments("22d");
+//        dbTool.selectStatments("22e");
+//        dbTool.selectStatments("22f");
+//        dbTool.selectStatments("22g");
+//        dbTool.selectStatments("22h");
+//        dbTool.selectStatments("22i");
+//        dbTool.selectStatments("22j");
+//        dbTool.selectStatments("22k");
+//        dbTool.selectStatments("22l");
+//        dbTool.selectStatments("22ll");
+//        dbTool.selectStatments("22m");
+//        dbTool.selectStatments("22n");
+//        dbTool.selectStatments("22o");
+
+        dbTool.selectStatments("3");
+        dbTool.selectStatments("4");
+        dbTool.selectStatments("8");
+        dbTool.selectStatments("9");
+        dbTool.selectStatments("14");
+        dbTool.selectStatments("23");
+        dbTool.selectStatments("24");
+        dbTool.selectStatments("25");
+        dbTool.selectStatments("26");
+        dbTool.selectStatments("27");
+        dbTool.selectStatments("29");
+        dbTool.selectStatments("30");
+
     }
 
 }
