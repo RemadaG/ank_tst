@@ -118,76 +118,74 @@ public class RunMe {
 //        dbTool.selectStatments("30");
 
         Map<String, String> lettersMatching = new HashMap<String, String>();
-        lettersMatching.put("a", "Ambicja");
-        lettersMatching.put("b", "Atrakcyjność");
-        lettersMatching.put("c", "Dobroć");
-        lettersMatching.put("d", "Kariera i sukces");
-        lettersMatching.put("e", "Umiejętność wybaczania");
-        lettersMatching.put("f", "Niezależność");
-        lettersMatching.put("g", "Odpowiedzialność");
-        lettersMatching.put("h", "Odwaga");
-        lettersMatching.put("i", "Opanowanie");
-        lettersMatching.put("j", "Pewność siebie");
-        lettersMatching.put("k", "Pieniądze");
-        lettersMatching.put("l", "Pokora");
-        lettersMatching.put("m", "Pomocniczość");
-        lettersMatching.put("n", "Szczerość");
-        lettersMatching.put("o", "Twórczość");
-        lettersMatching.put("p", "Uczciwość");
-        lettersMatching.put("q", "Umiejętności i inteligencja");
-        lettersMatching.put("r", "Uprzejmość");
-        lettersMatching.put("s", "Wierność");
-        lettersMatching.put("t", "Władza");
-        lettersMatching.put("u", "Wrażliwość");
-        lettersMatching.put("v", "Wstrzemięźliwość");
-        lettersMatching.put("w", "Wysoka pozycja społeczna");
+        lettersMatching.put("a", "za siebie");
+        lettersMatching.put("b", "za swoje uczynki");
+        lettersMatching.put("c", "za rodzeństwo");
+        lettersMatching.put("d", "za rodziców");
+        lettersMatching.put("e", "za własne wykształcenie");
+        lettersMatching.put("f", "za własne osiągnięcia");
+        lettersMatching.put("g", "za swoje błędy");
+        lettersMatching.put("h", "za życie");
+        lettersMatching.put("i", "za wiarę");
+        lettersMatching.put("j", "za miłość");
+        lettersMatching.put("k", "za przyszłość");
+        lettersMatching.put("l", "za swoje zobowiązania");
+        lettersMatching.put("ll", "za przyjaciół");
+//        lettersMatching.put("n", "Szczerość");
+//        lettersMatching.put("o", "Twórczość");
+//        lettersMatching.put("p", "Uczciwość");
+//        lettersMatching.put("q", "Umiejętności i inteligencja");
+//        lettersMatching.put("r", "Uprzejmość");
+//        lettersMatching.put("s", "Wierność");
+//        lettersMatching.put("t", "Władza");
+//        lettersMatching.put("u", "Wrażliwość");
+//        lettersMatching.put("v", "Wstrzemięźliwość");
+//        lettersMatching.put("w", "Wysoka pozycja społeczna");
 
 
-//        dbTool.selectComplex("2", lettersMatching, "");
-//        dbTool.selectComplex("2", lettersMatching, "where code like '%m%' or code like '%M%'");
-//        dbTool.selectComplex("2", lettersMatching, "where code like '%k%' or code like '%K%'");
+//        dbTool.selectComplex("19", lettersMatching, "");
+//        dbTool.selectComplex("19", lettersMatching, "where code like '%m%' or code like '%M%'");
+//        dbTool.selectComplex("19", lettersMatching, "where code like '%k%' or code like '%K%'");
 
-//        dbTool.selectComplex("2", lettersMatching, "where m_mz = 'a'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_mz = 'b'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_mz = 'c'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_mz = 'd'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_mz = 'e'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_mz = 'a'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_mz = 'b'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_mz = 'c'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_mz = 'd'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_mz = 'e'");
 //
-//        dbTool.selectComplex("2", lettersMatching, "where m_lr = '0'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_lr = '2'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_lr = '2'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_lr = '3'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_lr in ('4', '5', '6', '7')");
+//        dbTool.selectComplex("19", lettersMatching, "where m_lr = '0'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_lr = '1'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_lr = '2'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_lr = '3'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_lr in ('4', '5', '6', '7')");
 //
-//        dbTool.selectComplex("2", lettersMatching, "where m_wr LIKE '%a%'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wr LIKE '%b%'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wr LIKE '%c%'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wr LIKE '%a%'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wr LIKE '%b%'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wr LIKE '%c%'");
 //
-//        dbTool.selectComplex("2", lettersMatching, "where m_wm not in ('a','b','c','d','e', 'f', 'g')");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wm = 'c'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wm = 'd'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wm = 'e'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wm = 'f'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wm = 'g'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wm not in ('a','b','c','d','e', 'f', 'g')");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wm = 'c'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wm = 'd'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wm = 'e'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wm = 'f'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wm = 'g'");
 //
-//        dbTool.selectComplex("2", lettersMatching, "where m_wo = 'c'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wo = 'd'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wo = 'e'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wo = 'f'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wo = 'g'");
-//
-//        dbTool.selectComplex("2", lettersMatching, "where m_wykm not in ('a','b','c','d')");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wykm = 'a'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wykm = 'b'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wykm = 'c'");
-//        dbTool.selectComplex("2", lettersMatching, "where m_wykm = 'd'");
-//
-//        dbTool.selectComplex("2", lettersMatching, "where m_wyko = 'a'");
-        dbTool.selectComplex("2", lettersMatching, "where m_wyko = 'b'");
-        dbTool.selectComplex("2", lettersMatching, "where m_wyko = 'c'");
-        dbTool.selectComplex("2", lettersMatching, "where m_wyko = 'd'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wo = 'c'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wo = 'd'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wo = 'e'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wo = 'f'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wo = 'g'");
 
-
+//        dbTool.selectComplex("19", lettersMatching, "where m_wykm not in ('a','b','c','d')");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wykm = 'a'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wykm = 'b'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wykm = 'c'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wykm = 'd'");
+//
+//        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'a'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'b'");
+        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'c'");
+        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'd'");
     }
 
 }
