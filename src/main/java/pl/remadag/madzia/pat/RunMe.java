@@ -1,12 +1,5 @@
 package pl.remadag.madzia.pat;
 
-import pl.remadag.madzia.pat.data.ComplexTriple;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * Main class
  */
@@ -108,7 +101,7 @@ public class RunMe {
 //        dbTool.selectStatments("4");
 //        dbTool.selectStatments("8");
 //        dbTool.selectStatments("9");
-//        dbTool.selectStatments("14");
+        dbTool.selectStatments("14");
 //        dbTool.selectStatments("23");
 //        dbTool.selectStatments("24");
 //        dbTool.selectStatments("25");
@@ -117,20 +110,20 @@ public class RunMe {
 //        dbTool.selectStatments("29");
 //        dbTool.selectStatments("30");
 
-        Map<String, String> lettersMatching = new HashMap<String, String>();
-        lettersMatching.put("a", "za siebie");
-        lettersMatching.put("b", "za swoje uczynki");
-        lettersMatching.put("c", "za rodzeństwo");
-        lettersMatching.put("d", "za rodziców");
-        lettersMatching.put("e", "za własne wykształcenie");
-        lettersMatching.put("f", "za własne osiągnięcia");
-        lettersMatching.put("g", "za swoje błędy");
-        lettersMatching.put("h", "za życie");
-        lettersMatching.put("i", "za wiarę");
-        lettersMatching.put("j", "za miłość");
-        lettersMatching.put("k", "za przyszłość");
-        lettersMatching.put("l", "za swoje zobowiązania");
-        lettersMatching.put("ll", "za przyjaciół");
+//        Map<String, String> lettersMatching = new HashMap<String, String>();
+//        lettersMatching.put("a", "za siebie");
+//        lettersMatching.put("b", "za swoje uczynki");
+//        lettersMatching.put("c", "za rodzeństwo");
+//        lettersMatching.put("d", "za rodziców");
+//        lettersMatching.put("e", "za własne wykształcenie");
+//        lettersMatching.put("f", "za własne osiągnięcia");
+//        lettersMatching.put("g", "za swoje błędy");
+//        lettersMatching.put("h", "za życie");
+//        lettersMatching.put("i", "za wiarę");
+//        lettersMatching.put("j", "za miłość");
+//        lettersMatching.put("k", "za przyszłość");
+//        lettersMatching.put("l", "za swoje zobowiązania");
+//        lettersMatching.put("ll", "za przyjaciół");
 //        lettersMatching.put("n", "Szczerość");
 //        lettersMatching.put("o", "Twórczość");
 //        lettersMatching.put("p", "Uczciwość");
@@ -184,8 +177,8 @@ public class RunMe {
 //
 //        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'a'");
 //        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'b'");
-        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'c'");
-        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'd'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'c'");
+//        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'd'");
     }
 
 }
