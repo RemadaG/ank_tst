@@ -63,6 +63,9 @@ public class DBTools {
     }
 
     public void selectComplex(String question, Map<String, String> letters, String where) {
+        System.out.println();
+        System.out.println();
+        System.out.println(where);
         List<ComplexTriple> triple = new ArrayList<ComplexTriple>();
         for (String letter : letters.keySet()) {
             Connection sqlConn = LoadDriver.getPostgresConnection();
