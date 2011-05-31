@@ -101,7 +101,7 @@ public class RunMe {
 //        dbTool.selectStatments("4");
 //        dbTool.selectStatments("8");
 //        dbTool.selectStatments("9");
-        dbTool.selectStatments("14");
+//        dbTool.selectStatments("14");
 //        dbTool.selectStatments("23");
 //        dbTool.selectStatments("24");
 //        dbTool.selectStatments("25");
@@ -179,6 +179,8 @@ public class RunMe {
 //        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'b'");
 //        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'c'");
 //        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'd'");
+
+        dbTool.selectUnionStatments("16");
     }
 
 }

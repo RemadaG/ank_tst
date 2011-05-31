@@ -91,4 +91,17 @@ public class DBTools {
             }
         }
     }
+
+        public void selectUnionStatments(String question) {
+        System.out.println("Wywoluje union select dla P_" + question);
+
+        Connection sqlConn = LoadDriver.getPostgresConnection();
+        PostgreSQLProcedures procedures = new PostgreSQLProcedures(sqlConn);
+        try {
+            procedures.callUnionSelectP(question);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
