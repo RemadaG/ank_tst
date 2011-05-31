@@ -36,7 +36,7 @@ public class DBTools {
         Connection sqlConn = LoadDriver.getPostgresConnection();
         PostgreSQLProcedures procedures = new PostgreSQLProcedures(sqlConn);
         try {
-            procedures.callSelectP(question);
+            procedures.callSelectPWykOA(question);
         } catch (SQLException e) {
             e.printStackTrace();
         }

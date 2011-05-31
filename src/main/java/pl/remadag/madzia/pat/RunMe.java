@@ -80,22 +80,22 @@ public class RunMe {
 //        dbTool.selectStatments("19l");
 //        dbTool.selectStatments("19ll");
 
-//        dbTool.selectStatments("22a");
-//        dbTool.selectStatments("22b");
-//        dbTool.selectStatments("22c");
-//        dbTool.selectStatments("22d");
-//        dbTool.selectStatments("22e");
-//        dbTool.selectStatments("22f");
-//        dbTool.selectStatments("22g");
-//        dbTool.selectStatments("22h");
-//        dbTool.selectStatments("22i");
-//        dbTool.selectStatments("22j");
-//        dbTool.selectStatments("22k");
-//        dbTool.selectStatments("22l");
-//        dbTool.selectStatments("22ll");
-//        dbTool.selectStatments("22m");
-//        dbTool.selectStatments("22n");
-//        dbTool.selectStatments("22o");
+        dbTool.selectStatments("22a");
+        dbTool.selectStatments("22b");
+        dbTool.selectStatments("22c");
+        dbTool.selectStatments("22d");
+        dbTool.selectStatments("22e");
+        dbTool.selectStatments("22f");
+        dbTool.selectStatments("22g");
+        dbTool.selectStatments("22h");
+        dbTool.selectStatments("22i");
+        dbTool.selectStatments("22j");
+        dbTool.selectStatments("22k");
+        dbTool.selectStatments("22l");
+        dbTool.selectStatments("22ll");
+        dbTool.selectStatments("22m");
+        dbTool.selectStatments("22n");
+        dbTool.selectStatments("22o");
 
 //        dbTool.selectStatments("3");
 //        dbTool.selectStatments("4");
@@ -180,7 +180,7 @@ public class RunMe {
 //        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'c'");
 //        dbTool.selectComplex("19", lettersMatching, "where m_wyko = 'd'");
 
-        dbTool.selectUnionStatments("16");
+//        dbTool.selectUnionStatments("20");
     }
 
 }
