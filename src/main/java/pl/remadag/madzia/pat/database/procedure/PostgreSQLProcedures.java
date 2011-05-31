@@ -199,7 +199,7 @@ public class PostgreSQLProcedures implements SpiderProcedures {
             wholeSelect.append(" UNION ");
         }
         wholeSelect.delete(wholeSelect.length() - 6, wholeSelect.length());
-        wholeSelect.append(") TO '/tmp/p_"+question+".csv' WITH CSV;");
+        wholeSelect.append(") TO '/tmp/p_").append(question).append(".csv' WITH CSV;");
         return wholeSelect.toString();
     }
 
@@ -212,7 +212,7 @@ public class PostgreSQLProcedures implements SpiderProcedures {
 
     public void callSelectPWykOA(String question) throws SQLException {
                CallableStatement statement = sqlConn.prepareCall("COPY ( select p_" + question + "," +
-                "sum(case when m_wyko = 'a' then 1 else 0 end) as wykoa,''," +
+                "sum(case when m_wyko = 'a' then 1 else 0 end) as wykoa,''" +
                 "    from ankieta_pat group by p_" + question + " order by p_" + question + " " +
 
                 ") TO '/tmp/p_a" + question + ".csv' WITH CSV;");
